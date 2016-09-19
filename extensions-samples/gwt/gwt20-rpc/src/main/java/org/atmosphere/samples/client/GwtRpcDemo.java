@@ -112,6 +112,7 @@ public class GwtRpcDemo implements EntryPoint {
                 List<BaseEvent> messages = response.getMessages();
                 for (BaseEvent event : messages) {
                     logger.info("received message through RPC: " + event.toString());
+                    messageInput.setText(event.toString());
                 }
             }
         });
